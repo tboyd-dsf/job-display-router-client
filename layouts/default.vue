@@ -1,16 +1,11 @@
 <template>
   <v-app dark>
-    <head-bar></head-bar>
+    <v-header>
+      <head-bar></head-bar>
+    </v-header>
     <v-content>
       <nuxt></nuxt>
     </v-content>
-    <div class="py-12"></div>
-    <div class="py-12"></div>
-    <div class="py-12"></div>
-    <div class="py-12"></div>
-    <div class="py-12"></div>
-    <div class="py-12"></div>
-    <div class="py-12"></div>
     <foot-bar></foot-bar>
   </v-app>
 </template>
