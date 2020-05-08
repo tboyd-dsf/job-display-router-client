@@ -1,10 +1,11 @@
 <template>
   <div>
+      <div class="py-12"></div>
     <gmap-map
-      :center="{ lat: 10, lng: 10 }"
+      :center="{ lat: 38.93, lng: -94.76 }"
       :zoom="7"
       map-type-id="terrain"
-      style="width: 500px; height: 300px; margin: auto;"
+      style="width: 900px; height: 700px; margin: auto;"
     />
   </div>
 </template>
