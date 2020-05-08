@@ -46,6 +46,7 @@ export default {
         console.log(res)
         this.email = ''
         this.pass = ''
+        this.$router.push('/home')
       })
     }
   }

@@ -1,8 +1,6 @@
 <template>
   <v-app dark>
-    <v-header>
-      <head-bar></head-bar>
-    </v-header>
+    <head-bar></head-bar>
     <v-content>
       <nuxt></nuxt>
     </v-content>
