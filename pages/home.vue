@@ -1,12 +1,20 @@
 <template>
   <div class="container">
-      <div class="py-6"></div>
+    <div class="py-6"></div>
     <gmap-map
-      :center="{ lat: 38.93, lng: -94.76 }"
+      :center="{ lat: 38.935337, lng: -94.760773 }"
       :zoom="11"
       map-type-id="roadmap"
       style="width: 100%; height: 700px; margin: auto;"
+    >
+    <gmap-marker
+      v-for="(m, index) in places"
+      :key="index"
+      :position="m.position"
+      :clickable="true"
+      :draggable="true"
     />
+    </gmap-map>
   </div>
 </template>
 
@@ -16,15 +24,22 @@ import key from '../config/key'
 import * as VueGoogleMaps from '~/node_modules/vue2-google-maps/src/main'
 
 Vue.use(VueGoogleMaps, {
-    load: {
-        key: key,
-        libraries: 'places'
-    }
+  load: {
+    key: key,
+    libraries: 'places'
+  }
 })
- 
+
 export default {
   data() {
-    return {}
+    return {
+      places: [
+        {position: {lat:39.11, lng:-94.62}},
+        {position: {lat:39.10, lng:-94.64}},
+        {position: {lat:39.07, lng:-94.63}},
+        {position: {lat: 38.935337, lng: -94.760773}}
+      ]
+    }
   }
 }
 </script>
