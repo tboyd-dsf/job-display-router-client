@@ -20,12 +20,11 @@
 
 <script>
 import Vue from 'vue'
-import key from '../config/key'
 import * as VueGoogleMaps from '~/node_modules/vue2-google-maps/src/main'
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: process.env.API_KEY || key,
+    key: process.env.API_KEY,
     libraries: 'places'
   }
 })
