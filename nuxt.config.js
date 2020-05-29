@@ -1,6 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
-requestAnimationFrame('dotenv').config()
+require('dotenv').config()
 
 export default {
   mode: 'universal',
