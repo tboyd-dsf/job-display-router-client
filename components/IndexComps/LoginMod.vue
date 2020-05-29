@@ -5,13 +5,13 @@
       <v-card-text>
         <v-row>
           <v-col cols="12">
-            <v-text-field v-model="email" label="Email" type="email" clearable></v-text-field>
+            <v-text-field v-model="user.email" label="Email" type="email" clearable></v-text-field>
           </v-col>
         </v-row>
         <v-row>
           <v-col cols="12">
             <v-text-field
-              v-model="pass"
+              v-model="user.password"
               label="Password"
               type="password"
               clearable
@@ -28,25 +28,33 @@
 
 <script>
 import axios from 'axios';
+import {mapState} from 'vuex'
 export default {
   data: () => {
     return {
-      email: '',
-      pass: ''
+      user: {
+        email: '',
+        password: ''
+      }
     }
   },
   methods: {
     loginUser() {
       console.log('loginUser function running')
       axios.post("http://localhost:3030/api/login", {
-        email: this.email,
-        password: this.pass
+        email: this.user.email,
+        password: this.user.password
       })
       .then(res => {
         console.log(res)
+        this.user.id = res.data.id
+        this.$store.dispatch('user/setUser', this.user)
         this.email = ''
         this.pass = ''
         this.$router.push('/home')
+      })
+      .catch(err => {
+        if (err) throw err
       })
     }
   }

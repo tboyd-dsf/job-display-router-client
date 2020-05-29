@@ -3,7 +3,7 @@
       <div class="py-12"></div>
     <gmap-map
       :center="{ lat: 38.93, lng: -94.76 }"
-      :zoom="7"
+      :zoom="10"
       map-type-id="terrain"
       style="width: 900px; height: 700px; margin: auto;"
     />
