@@ -81,5 +81,8 @@ export default {
     extend (config, ctx) {
       transpile: [/^vue2-google-maps($|\/)/]
     }
+  }, 
+  env: {
+    
   }
 }
