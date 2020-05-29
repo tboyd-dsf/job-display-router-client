@@ -4,7 +4,7 @@
     <gmap-map
       :center="{ lat: 38.93, lng: -94.76 }"
       :zoom="11"
-      map-type-id="terrain"
+      map-type-id="roadmap"
       style="width: 100%; height: 700px; margin: auto;"
     />
   </div>
@@ -12,11 +12,12 @@
 
 <script>
 import Vue from 'vue'
+import key from '../config/key'
 import * as VueGoogleMaps from '~/node_modules/vue2-google-maps/src/main'
 
 Vue.use(VueGoogleMaps, {
     load: {
-        key: 'AIzaSyBixdZ59lvciQCEdgRo3ggV2-UyDZeK9jA',
+        key: key,
         libraries: 'places'
     }
 })
