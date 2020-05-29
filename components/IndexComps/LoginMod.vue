@@ -41,7 +41,8 @@ export default {
   methods: {
     loginUser() {
       console.log('loginUser function running')
-      axios.post("https://job-location-router-server.herokuapp.com/api/login", {
+      
+      axios.post(process.env.API_URL, {
         email: this.user.email,
         password: this.user.password
       })
