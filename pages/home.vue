@@ -22,7 +22,7 @@
 import Vue from 'vue'
 import * as VueGoogleMaps from '~/node_modules/vue2-google-maps/src/main'
 
-let theKey = process.env.MAPS_KEY
+let theKey = process.env.MAPS_KEY || 'AIzaSyC_oA-1diHOvmftF8uchMe-g86udCdzfk8'
 
 Vue.use(VueGoogleMaps, {
   load: {
