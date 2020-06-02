@@ -67,7 +67,7 @@ export default {
           if (err) throw err
         })
     }
-  } //comment
+  }
 }
 </script>
 

@@ -41,7 +41,8 @@ export default {
         {position: {lat: 38.935337, lng: -94.760773}}
       ]
     }
-  }
+  },
+  middleware: 'auth'
 }
 </script>
 
