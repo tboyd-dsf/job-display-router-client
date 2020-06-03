@@ -16,7 +16,7 @@ export default {
     logoutUser() {
       console.log('logoutUser function running')
 
-      let urlPost = process.env.API_LOGOUT
+      let urlPost = process.env.DEV_API_LOGOUT || process.env.PROD_API_LOGOUT
 
       axios
         .get(urlPost)

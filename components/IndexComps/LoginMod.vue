@@ -58,7 +58,7 @@ export default {
     loginUser() {
       console.log('loginUser function running')
 
-      let urlPost = process.env.API_URL
+      let urlPost = process.env.DEV_API_URL || process.env.PROD_API_URL
 
       axios
         .post(urlPost, {
