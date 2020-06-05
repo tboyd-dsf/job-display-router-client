@@ -60,6 +60,8 @@ export default {
 
       let urlPost = process.env.PROD_API_URL
 
+      console.log(urlPost)
+
       // process.env.DEV_API_URL ||
 
       axios
