@@ -34,7 +34,7 @@
       <v-snackbar top v-model="snackbar">
         The email or password you entered was incorrect. Please try again.
         <v-btn color="pink" text @click="snackbar = false">
-          Close
+          Close 
         </v-btn>
       </v-snackbar>
     </div>
@@ -44,6 +44,7 @@
 <script>
 import axios from 'axios'
 import { mapState } from 'vuex'
+
 export default {
   data: () => {
     return {
@@ -58,11 +59,11 @@ export default {
     loginUser() {
       console.log('loginUser function running')
 
-      let urlPost = process.env.PROD_API_URL
+      let urlPost = process.env.NUXT_ENV_API_URL
 
-      console.log(urlPost)
+      console.log(process.env)
 
-      // process.env.DEV_API_URL ||
+      // process.env.NUXT_ENV_API_URL ||
 
       axios
         .post(urlPost, {
