@@ -30,6 +30,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/auth0_sdk.client.js',
+    '~/plugins/auth0_sdk_plugin.client.js'
   ],
   /*
   ** Nuxt.js dev-modules

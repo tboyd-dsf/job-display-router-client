@@ -59,29 +59,31 @@ export default {
     loginUser() {
       console.log('loginUser function running')
 
-      let urlPost = process.env.NUXT_ENV_API_URL
+      this.$auth.loginWithRedirect();
 
-      console.log(process.env)
+      // let urlPost = process.env.NUXT_ENV_API_URL
 
-      // process.env.NUXT_ENV_API_URL ||
+      // console.log(process.env)
 
-      axios
-        .post(urlPost, {
-          email: this.user.email,
-          password: this.user.password
-        })
-        .then(res => {
-          console.log(res)
-          this.user.id = res.data.id
-          this.$store.dispatch('user/setUser', this.user)
-          this.email = ''
-          this.pass = ''
-          this.$router.push('/home')
-        })
-        .catch(err => {
-          this.snackbar = true
-          this.user.password = ''
-        })
+      // // process.env.NUXT_ENV_API_URL ||
+
+      // axios
+      //   .post(urlPost, {
+      //     email: this.user.email,
+      //     password: this.user.password
+      //   })
+      //   .then(res => {
+      //     console.log(res)
+      //     this.user.id = res.data.id
+      //     this.$store.dispatch('user/setUser', this.user)
+      //     this.email = ''
+      //     this.pass = ''
+      //     this.$router.push('/home')
+      //   })
+      //   .catch(err => {
+      //     this.snackbar = true
+      //     this.user.password = ''
+      //   })
     }
   }
 }
