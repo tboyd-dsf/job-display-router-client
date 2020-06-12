@@ -88,7 +88,8 @@ export default {
       local: false,
       auth0: {
         domain: process.env.NUXT_ENV_AUTH0_DOMAIN,
-        client_id: process.env.NUXT_ENV_AUTH0_CLIENT_ID
+        client_id: process.env.NUXT_ENV_AUTH0_CLIENT_ID,
+        audience: process.env.NUXT_ENV_AUTH0_AUDIENCE
       }
     }
   },
