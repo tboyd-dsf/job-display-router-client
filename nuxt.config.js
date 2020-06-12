@@ -83,9 +83,9 @@ export default {
     strategies: {
       local: false,
       auth0: {
-        domain: process.env.NUXT_ENV_AUTH0_DOMAIN,
-        client_id: process.env.NUXT_ENV_AUTH0_CLIENT_ID,
-        audience: process.env.NUXT_ENV_AUTH0_AUDIENCE
+        domain: 'emmauscompany.auth0.com',
+        client_id:'uzmvbykDYuBO6axb4WbReyVo42730UhQ',
+        audience: 'https://job-location-router.com/'
       }
     }
   },
