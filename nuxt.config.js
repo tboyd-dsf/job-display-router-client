@@ -30,8 +30,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/auth0_sdk.client.js',
-    '~/plugins/auth0_sdk_plugin.client.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -45,7 +43,8 @@ export default {
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/auth'
   ],
   /*
   ** Axios module configuration
@@ -77,6 +76,22 @@ export default {
   /*
   ** Build configuration
   */
+  router: {
+    middleware: ['auth']
+  },
+  auth: {
+    redirect: {
+      login: '/', // redirect user when not connected
+      callback: '/home'
+    },
+    strategies: {
+      local: false,
+      auth0: {
+        domain: process.env.NUXT_ENV_AUTH0_DOMAIN,
+        client_id: process.env.NUXT_ENV_AUTH0_CLIENT_ID
+      }
+    }
+  },
   build: {
     /*
     ** You can extend webpack config here

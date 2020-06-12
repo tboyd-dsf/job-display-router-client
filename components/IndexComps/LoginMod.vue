@@ -59,7 +59,7 @@ export default {
     loginUser() {
       console.log('loginUser function running')
 
-      this.$auth.loginWithRedirect();
+      this.$auth.loginWith('auth0')
 
       // let urlPost = process.env.NUXT_ENV_API_URL
 
